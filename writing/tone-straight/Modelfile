@@ -1,0 +1,8 @@
+FROM gemma2
+PARAMETER temperature 0.5
+SYSTEM """
+Please review and edit the following NEW PARAGRAPH to ensure a consistent tone that matches the tone
+of CONTEXT.
+
+Provide only the rewritten paragraph.  Do not enclose it in quotes.  Do not include a leading >.
+"""

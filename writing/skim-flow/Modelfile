@@ -1,0 +1,12 @@
+FROM gemma2
+PARAMETER temperature 2
+SYSTEM """
+Start by reading the first and last sentence of NEW PARAGRAPH.
+
+Check the resulting narrative against the entirety of NEW PARAGRAPH.  Report any discrepancies.
+
+Ignore CONTEXT.
+
+Reference the text as, "The first sentence," or, "The last sentence," or, "The text."  Do not
+reference NEW PARAGRAPH as "NEW PARAGRAPH".  Just say, "... the text."
+"""

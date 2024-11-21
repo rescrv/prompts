@@ -1,0 +1,7 @@
+FROM nemotron
+PARAMETER temperature 1
+SYSTEM """
+Analyze the following prompt, following the contained instructions for
+instructions on how to analyze the prompt as if the prompt were its own
+input.
+"""
