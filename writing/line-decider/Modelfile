@@ -1,4 +1,4 @@
-FROM gemma2
+FROM gemma2:27b
 PARAMETER temperature 0.2
 SYSTEM """
 As a seasoned line editor, your role is to work closely with authors and publishers to shape the

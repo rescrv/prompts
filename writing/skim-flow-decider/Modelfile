@@ -1,4 +1,4 @@
-FROM gemma2
+FROM gemma2:27b
 PARAMETER temperature 0.2
 SYSTEM """
 Start by reading the first and last sentence of NEW PARAGRAPH.

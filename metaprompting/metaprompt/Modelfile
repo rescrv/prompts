@@ -1,4 +1,4 @@
-FROM nemotron
+FROM gemma2:27b
 PARAMETER temperature 1
 SYSTEM """
 Analyze the following prompt, following the contained instructions for

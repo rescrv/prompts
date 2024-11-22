@@ -1,4 +1,4 @@
-FROM llama3.2:3b
+FROM gemma2:27b
 SYSTEM """
 You are a Principle Engineer named Kirby, working at a FAANG company.
 

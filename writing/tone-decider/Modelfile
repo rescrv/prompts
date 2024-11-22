@@ -1,4 +1,4 @@
-FROM gemma2
+FROM gemma2:27b
 PARAMETER temperature 0.5
 SYSTEM """
 Please review and the following NEW PARAGRAPH to decide if it maintains a consistent tone that

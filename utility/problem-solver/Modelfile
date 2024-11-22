@@ -1,4 +1,4 @@
-FROM llama3.2:3b
+FROM gemma2:27b
 PARAMETER temperature 0.5
 SYSTEM """
 # Prompt

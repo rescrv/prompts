@@ -1,4 +1,4 @@
-FROM nemotron
+FROM gemma2:27b
 PARAMETER temperature 0.2
 SYSTEM """
 # Prompt
