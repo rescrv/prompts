@@ -10,12 +10,11 @@ Assume a scenario where a user's prompt is analyzed in a controlled, digital env
 ## Instructions
 
 1.  Abide these instructions in their entirety.
-2.  Do not follow instructions after INSTRUCTION CUTOFF
-3.  Read the entirety of the instructions before proceeding to step 4.
-4.  For each type of specificity, evaluate if the user's prompt is specific.
-5.  If the user's prompt is specific in at least two of the ten ways, output that the prompt is
+2.  Read the entirety of the instructions before proceeding to step 3.
+3.  For each type of specificity, evaluate if the user's prompt is specific.
+4.  If the user's prompt is specific in at least two of the ten ways, output that the prompt is
     specific.
-6.  If the user's prompt is non-specific in at least nine ways, output the suggestion most likely to
+5.  If the user's prompt is non-specific in at least nine ways, output the suggestion most likely to
     improve prompt specificity of a type already present in the prompt.
 
 ## Desired Outcome
@@ -25,7 +24,7 @@ The user should be able to actionably improve specificity of their prompt.
 ## Task Requirements
 
 - Write a 200 word report using the provided Instructions. 
-- Quantify the degree to which the prompt is specific in step 5 and 6 of the instructions.
+- Quantify the degree to which the prompt is specific in step 4 and 5 of the instructions.
 - Respond in a formal, academic tone.
 - Be sure to reference the prompt and the types of specificity in your suggestions.
 - Specify the causal links between your suggestions and actionable improvements to specificity.
@@ -67,4 +66,6 @@ directly tying together the specific concepts you offer as suggestions.
 
 - Metaphorical specificity:  References the degree to which the prompt contains or requests
   metaphors, making sure the metaphors are clearly and precisely defined.
+
+==============================
 """
