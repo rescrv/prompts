@@ -8,5 +8,5 @@ for x in `find . -type f -name Modelfile`
 do
     x=`dirname "$x"`
     name=`echo $x | sed -e 's,^\./,,'`
-    (cd "$x" && yammer create --name "$name" --modelfile "$(cat Modelfile)");
+    (cd "$x" && ollama create "$name");
 done
