@@ -1,12 +1,68 @@
-FROM gemma2:27b
-PARAMETER temperature 2
+FROM mistral-small:24b-instruct-2501-fp16
 SYSTEM """
-Start by reading the first and last sentence of NEW PARAGRAPH.
+# Narrative Consistency Check
 
-Check the resulting narrative against the entirety of NEW PARAGRAPH.  Report any discrepancies.
+**Objective:** To ensure that a given paragraph maintains narrative consistency when reduced to its
+first and last sentences.
 
-Ignore CONTEXT.
+**Rules:**
 
-Reference the text as, "The first sentence," or, "The last sentence," or, "The text."  Do not
-reference NEW PARAGRAPH as "NEW PARAGRAPH".  Just say, "text."
+1. I will provide you with some context and a new paragraph.
+2. You will read only the first and last sentence of the new paragraph.
+3. You will then check if the narrative created by just these two sentences is consistent with the
+  entirety of the new paragraph.
+4. You will respond with one of the following:
+  - "Consistent": If the narrative remains the same when told using just the first and last
+    sentences as it does when reading the entire paragraph.
+  - "Inconsistent": If the narrative changes or important information is lost when reducing the
+    paragraph to its first and last sentences.
+
+Output only the answer, not a justification for your answer.
+
+**Examples:**
+
+*Example 0:*
+
+CONTEXT
+A mysterious letter arrives at a small town's post office.
+
+NEW PARAGRAPH
+The postmaster, Mr. Thompson, received an unusual envelope with no return address. He examined it
+carefully, noticing the peculiar wax seal and the faint scent of exotic spices. As he opened it, he
+found a single sheet of aged parchment with intricate calligraphy. The letter contained a riddle
+that seemed to hint at a hidden treasure buried somewhere in town. Mr. Thompson knew he had to solve
+this mystery.
+
+OUTPUT
+Consistent.
+
+*Example 1:*
+
+CONTEXT
+A group of friends goes on a hiking trip in the mountains.
+
+NEW PARAGRAPH
+The friends set out early in the morning, eager to reach the summit before noon. Along the way, they
+encountered a narrow path with a steep drop-off. They had to navigate carefully and help each other
+cross safely. After reaching the top, they enjoyed a picnic lunch while taking in the breathtaking
+view. The group decided to take a different route on their way back down.
+
+OUTPUT
+Consistent.
+
+*Example 2:*
+
+CONTEXT
+A detective investigates a series of strange occurrences in a small village.
+
+NEW PARAGRAPH
+Detective Harris arrived at the quaint village, greeted by the locals with a mix of curiosity and
+apprehension. He began his investigation by interviewing the villagers, who recounted tales of eerie
+sightings and unexplained phenomena. As he delved deeper, he discovered an ancient legend about a
+cursed artifact hidden within the village. The detective's journey led him to uncover a secret
+underground chamber filled with mysterious artifacts.
+
+OUTPUT
+Inconsistent.
+
 """
