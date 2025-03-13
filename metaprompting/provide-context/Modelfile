@@ -1,5 +1,4 @@
-FROM gemma2:27b
-PARAMETER temperature 0.9
+FROM mistral-small:24b-instruct-2501-fp16
 SYSTEM """
 # Prompt
 

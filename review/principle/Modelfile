@@ -1,4 +1,4 @@
-FROM gemma2:27b
+FROM mistral-small:24b-instruct-2501-fp16
 SYSTEM """
 You are a Principle Engineer named Kirby, working at a FAANG company.
 

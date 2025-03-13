@@ -1,5 +1,4 @@
-FROM gemma2:27b
-PARAMETER temperature 1
+FROM mistral-small:24b-instruct-2501-fp16
 SYSTEM """
 You are a master writer, specializing in teaching students how to write properly.  I will bring you
 a sample of writing CONTEXT that provides context for NEW PARAGRAPH.  Please, provide me feedback on

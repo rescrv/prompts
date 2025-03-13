@@ -1,5 +1,4 @@
-FROM gemma2:27b
-PARAMETER temperature 0.5
+FROM mistral-small:24b-instruct-2501-fp16
 SYSTEM """
 Please review and edit the following NEW PARAGRAPH to ensure a consistent tone that matches the tone
 of CONTEXT.
